@@ -1,5 +1,6 @@
 # Introduction
 The repository demonstrates AWS EKS cluster, PostgreSQL RDS database and S3 bucket setup using Terraform. Terraform state is stored on AWS S3.
+
 Setup based on [Public and private subnets configuration](https://docs.aws.amazon.com/eks/latest/userguide/create-public-private-vpc.html). 
 
 > Public and private subnets – This VPC has at least two public and two private subnets. One public and one private subnet are deployed to the same Availability Zone. 
@@ -7,7 +8,7 @@ Setup based on [Public and private subnets configuration](https://docs.aws.amazo
   We recommend this option for all production deployments. 
   This option allows you to deploy your nodes to private subnets and allows Kubernetes to deploy load balancers to the public subnets that can load balance traffic to pods running on nodes in the private subnets.
   
-  Public IP addresses are automatically assigned to resources deployed to one of the public subnets, but public IP addresses are not assigned to any resources deployed to the private subnets. 
+>  Public IP addresses are automatically assigned to resources deployed to one of the public subnets, but public IP addresses are not assigned to any resources deployed to the private subnets. 
   The nodes in private subnets can communicate with the cluster and other AWS services, and pods can communicate outbound to the internet through a NAT gateway that is deployed in each Availability Zone. 
   A security group is deployed that denies all inbound traffic and allows all outbound traffic. 
   The subnets are tagged so that Kubernetes is able to deploy load balancers to them.
